@@ -1,19 +1,26 @@
 const KASB = "https://www.kasb.or.kr/front/board/cmtreadListB.do";
 
 const sources = {
-  ifrs15: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/",
-  ias1: "https://www.ifrs.org/issued-standards/list-of-standards/ias-1-presentation-of-financial-statements/",
-  ias8: "https://www.ifrs.org/issued-standards/list-of-standards/ias-8-accounting-policies-changes-in-accounting-estimates-and-errors/",
-  ias10: "https://www.ifrs.org/issued-standards/list-of-standards/ias-10-events-after-the-reporting-period/",
-  ias16: "https://www.ifrs.org/issued-standards/list-of-standards/ias-16-property-plant-and-equipment/",
-  ias21: "https://www.ifrs.org/issued-standards/list-of-standards/ias-21-the-effects-of-changes-in-foreign-exchange-rates/",
-  ias32: "https://www.ifrs.org/issued-standards/list-of-standards/ias-32-financial-instruments-presentation/",
-  ias37: "https://www.ifrs.org/issued-standards/list-of-standards/ias-37-provisions-contingent-liabilities-and-contingent-assets/",
-  ifrs9: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
-  ifrs16: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/",
-  ifric1: "https://www.ifrs.org/issued-standards/list-of-standards/ifric-1-changes-in-existing-decommissioning-restoration-and-similar-liabilities/",
-  ifric22: "https://www.ifrs.org/issued-standards/list-of-standards/ifric-22-foreign-currency-transactions-and-advance-consideration/",
-  leaseTermDecision: "https://www.ifrs.org/projects/completed-projects/2019/lease-term-and-useful-life-of-leasehold-improvements-ifrs-16-and-ias-16/",
+  ifrs15: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs15.html",
+  ifrs15IE: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs15-ie.html",
+  ias1: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ias1.html",
+  ias8: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ias8.html",
+  ias10: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ias10.html",
+  ias16: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ias16.html",
+  ias21: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ias21.html",
+  ias32: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2026/issued/ias32.html",
+  ias32IE: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ias32-ie.html",
+  ias37: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ias37.html",
+  ifrs9: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs9.html",
+  ifrs16: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifrs16.html",
+  ifrs16IE: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifrs16-ie.html",
+  ifric1: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifric1.html",
+  ifric22: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ifric22.html",
+  ifric22IE: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2024/issued/ifric22-ie.html",
+  principalAgentDecision: "https://www.ifrs.org/content/dam/ifrs/supporting-implementation/agenda-decisions/2022/principal-versus-agent-software-reseller-may-2022.pdf",
+  leaseTermDecision: "https://www.ifrs.org/content/dam/ifrs/supporting-implementation/agenda-decisions/2019/ifrs-16-ias-16-lease-term-and-useful-life-of-leasehold-improvements.pdf",
+  leaseModificationSlides: "https://www.ifrs.org/-/media/feature/supporting-implementation/ifrs-16/ifrs-16-supporting-implementation-webcast-slides/ifrs-16-lease-modifications-lessees-webcast-march-2017.pdf",
+  materiality: "https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/ps2.html",
 };
 
 function refs(...items) {
@@ -38,7 +45,7 @@ export const questions = [
     answer: "10만원 순액 수수료수익",
     explanation: "여행사는 고객에게 이전되기 전에 항공운송 서비스를 통제하지 않고 항공사의 제공을 주선한다. 고객에게 현금을 직접 받았다는 사실은 본인 판단을 결정하지 않는다.",
     journal: "차) 현금·매출채권 100만원 / 대) 항공사정산채무 90만원, 항공권판매수수료수익 10만원",
-    references: refs(["K-IFRS 1115 / IFRS 15", "B34–B38", "본인은 이전 전 통제한 재화·용역을 총액으로, 대리인은 주선 대가인 수수료를 순액으로 인식한다.", sources.ifrs15]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 22, 26; B34–B38", "특정 재화·용역을 이전 전에 통제하지 않고 제공을 주선하면 대리인으로서 순액 수수료를 인식한다.", sources.ifrs15], ["IFRS 15 공식 적용사례", "Example 45·48 (IE230–IE233A, IE244–IE248)", "고객에게 이전하기 전 권리를 통제하지 않는 대리인 사례다.", sources.ifrs15IE], ["IFRS 해석위원회 안건결정", "Principal versus Agent: Software Reseller (2022.5)", "본인·대리인은 지표를 투표식으로 보지 않고 특정 재화·용역의 이전 전 통제를 사실관계 전체로 판단한다.", sources.principalAgentDecision]),
   },
   {
     id: 2,
@@ -50,7 +57,7 @@ export const questions = [
     correct: 1,
     answer: "100만원 총액 매출과 70만원 원가",
     explanation: "여행사는 특정 항공서비스를 받을 권리를 먼저 통제하고 미판매 위험, 고객 배정권, 가격 재량을 부담한다. 실제 운항 주체가 항공사라는 사실만으로 대리인이 되지는 않는다.",
-    references: refs(["K-IFRS 1115 / IFRS 15", "B35A(a), B37", "제3자가 수행할 서비스에 대한 권리를 먼저 통제하거나 재고위험·가격 재량이 통제를 뒷받침하면 본인일 수 있다.", sources.ifrs15]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 B34–B35, B35A(a), B37(b)–(c), B38", "제3자가 수행할 서비스에 대한 권리를 먼저 통제하고 재고위험·가격 재량을 부담하면 본인일 수 있다.", sources.ifrs15], ["IFRS 15 공식 적용사례", "Example 47 (IE239–IE243)", "항공권을 고객 주문 전에 확정 구매하고 미판매 위험을 부담하는 재판매자는 본인인 공식 항공권 사례다.", sources.ifrs15IE]),
   },
   {
     id: 3,
@@ -62,7 +69,7 @@ export const questions = [
     correct: 1,
     answer: "대리인",
     explanation: "재고위험은 하나의 지표일 뿐이지만, 이 사례에서는 위약금 없는 반환, 판매분만 지급, 항공사의 핵심 조건 결정이 함께 여행사의 이전 전 통제 부재를 보여준다.",
-    references: refs(["K-IFRS 1115 / IFRS 15", "B34–B38", "주된 이행 책임·재고위험·가격 재량은 통제 판단을 보조하는 지표이며 투표식으로 적용하지 않는다.", sources.ifrs15]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 22, 26; B34, B36–B38", "주된 이행 책임·재고위험·가격 재량은 이전 전 통제 판단을 보조하는 지표다.", sources.ifrs15], ["IFRS 15 공식 적용사례", "Example 48 (IE244–IE248)", "고객 주문 전에 구매약정이 없는 바우처 재판매자가 대리인인 공식 사례다.", sources.ifrs15IE]),
   },
   {
     id: 4,
@@ -74,7 +81,7 @@ export const questions = [
     correct: 1,
     answer: "통합된 패키지에 대한 본인",
     explanation: "약속한 산출물은 개별 예약의 단순 주선이 아니라 여행사가 여러 투입요소를 유의적으로 통합한 패키지다. 여행사가 결합된 서비스를 고객 이전 전에 통제한다.",
-    references: refs(["K-IFRS 1115 / IFRS 15", "문단 27, 29; B35A(c)", "다른 당사자가 제공한 재화·용역을 통합해 고객에게 결합된 산출물을 제공하기 전에 통제하면 본인일 수 있다.", sources.ifrs15]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 22, 27–30, 73–86; B34–B38", "구별되는 각 약속을 식별한 뒤 각 특정 재화·용역의 이전 전 통제와 거래가격 배분을 판단한다.", sources.ifrs15], ["IFRS 15 공식 적용사례", "Example 48A (IE248A–IE248F)", "한 계약 안에서도 특정 재화·용역별로 본인과 대리인 결론이 달라질 수 있다.", sources.ifrs15IE]),
   },
   {
     id: 5,
@@ -87,7 +94,7 @@ export const questions = [
     answer: "계약부채에서 환불부채와 취소수수료수익으로 전환",
     explanation: "현금 수취 시 수행의무가 남아 있으므로 계약부채다. 취소 확정으로 현금 반환 의무와 보유할 권리가 확정되면 140만원은 환불부채, 60만원은 수익이 된다.",
     journal: "수취: 차) 현금 200 / 대) 계약부채 200 · 취소: 차) 계약부채 200 / 대) 환불부채 140, 취소수수료수익 60",
-    references: refs(["K-IFRS 1115 / IFRS 15", "문단 31, 55, 106; 부록 A", "수행 전 수취 대가는 계약부채이며, 환불 예상 대가는 환불부채로 표시한다.", sources.ifrs15]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 15(b), 55, 105–106; B44–B51", "수행 전 수취액은 계약부채, 예상 반환액은 환불부채이며 비환불 대가도 잔여 의무와 권리소멸 시점을 검토한다.", sources.ifrs15], ["IFRS 15 공식 적용사례", "Example 53 (IE271–IE274); 환불권 Examples 22–24", "환불불가 선불수수료는 그 명칭만으로 즉시 수익이 되지 않음을 보여준다.", sources.ifrs15IE]),
   },
   {
     id: 6,
@@ -99,7 +106,7 @@ export const questions = [
     correct: 1,
     answer: "원칙과 전표 빈도를 구분",
     explanation: "수익은 진행도에 따라 인식하지만 K-IFRS는 전표 입력 빈도를 정하지 않는다. 짧은 서비스가 같은 보고기간에 시작·종료되고 차이가 중요하지 않다면 일별 전표 없이도 결산 재무제표가 원칙에 맞을 수 있다. 결산 경계를 넘거나 중요한 거래는 컷오프 조정한다.",
-    references: refs(["K-IFRS 1115 / IFRS 15", "문단 35(a), 39–40", "고객이 수행과 동시에 효익을 얻으면 기간에 걸쳐 수익을 인식하고 진행도를 측정한다.", sources.ifrs15], ["K-IFRS 1008 / IAS 8", "문단 8", "중요하지 않은 거래에 회계정책을 적용하지 않은 효과가 중요하지 않다면 기준서 위반으로 보지 않지만, 의도적 왜곡은 허용하지 않는다.", sources.ias8]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 31, 35–40", "고객이 수행과 동시에 효익을 얻으면 기간에 걸쳐 수익을 인식하고 보고기간 말 진행도를 측정한다.", sources.ifrs15], ["K-IFRS 1001·1008 / IAS 1·IAS 8", "IAS 1 문단 27, 29–31; IAS 8 문단 8", "중요하지 않은 차이는 단순화할 수 있어도 발생주의와 의도적 컷오프 왜곡 금지는 유지된다.", sources.ias8], ["IFRS Practice Statement 2", "2025판 Making Materiality Judgements", "중요성 판단을 재무제표 작성 과정에 적용하는 공식 실무서다.", sources.materiality]),
   },
   {
     id: 7,
@@ -111,7 +118,7 @@ export const questions = [
     correct: 0,
     answer: "계약부채 200만원, 환불부채 140만원, 총수익 260만원",
     explanation: "A에는 서비스 의무, B에는 현금 반환 의무와 60만원 보유 권리, C에는 완료된 수행의무가 남는다. 취소수수료도 전체 영업수익 합계에서 빠뜨리지 않는다.",
-    references: refs(["K-IFRS 1115 / IFRS 15", "문단 31, 55, 106; 부록 A", "수행의무·환불의무·수익 인식 여부를 결산일 현재 의무의 성격에 따라 구분한다.", sources.ifrs15]),
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 31, 46, 55, 105–108", "결산일 현재 미이행 대가는 계약부채, 반환 예상분은 환불부채, 이미 이행한 대가만 수익으로 분류한다.", sources.ifrs15], ["K-IFRS 1001 / IAS 1", "문단 69(a)", "정상영업주기 안에 결제되는 부채는 유동부채로 분류한다.", sources.ias1], ["IFRS 15 공식 적용사례", "환불권 Examples 22–24", "환불권이 있는 판매에서 수익과 환불부채를 분리하는 공식 사례다.", sources.ifrs15IE]),
   },
   {
     id: 8,
@@ -123,7 +130,7 @@ export const questions = [
     correct: 1,
     answer: "A 충당부채, B 우발부채, C 일반 미지급부채",
     explanation: "충당부채는 현재의무, 높은 유출 가능성, 신뢰성 있는 추정을 모두 충족해야 한다. 30% 가능성은 보통 인식하지 않고 희박하지 않으면 공시한다. 청구서 미수령은 확정된 사용료 부채 인식을 막지 않는다.",
-    references: refs(["K-IFRS 1037 / IAS 37", "문단 14, 23, 27–28, 36, 86", "충당부채 인식요건, 우발부채 비인식·공시, 최선의 추정치를 규정한다.", sources.ias37]),
+    references: refs(["K-IFRS 1037 / IAS 37", "문단 10–13, 14–30, 36, 86; 특히 11(a)–(b)", "일반 미지급부채와 충당부채의 구분, 충당부채 인식요건, 우발부채 비인식·공시와 최선추정치를 규정한다.", sources.ias37]),
   },
   {
     id: 9,
@@ -135,7 +142,7 @@ export const questions = [
     correct: 1,
     answer: "최초 복구원가는 자산화, 시간 경과분은 금융비용",
     explanation: "자산의 취득·건설 결과 발생한 최초 복구의무 추정치는 유형자산 원가와 충당부채로 인식한다. 할인액의 기간 경과는 금융원가이며, 이후 추정 변경은 해석서 2101에 따라 관련 자산과 부채를 조정한다.",
-    references: refs(["K-IFRS 1016 / IAS 16", "문단 16(c)", "자산의 해체·제거 및 부지복구 추정원가는 유형자산 원가에 포함한다.", sources.ias16], ["K-IFRS 1037 / IAS 37", "문단 45, 60", "중요한 시간가치를 할인하며 할인액 상각은 금융원가다.", sources.ias37], ["K-IFRS 해석서 2101 / IFRIC 1", "문단 4–8", "기존 해체·복구충당부채 측정 변경의 자산·부채 조정을 다룬다.", sources.ifric1]),
+    references: refs(["K-IFRS 1016 / IAS 16", "문단 16(c)", "자산의 해체·제거 및 부지복구 추정원가는 유형자산 원가에 포함한다.", sources.ias16], ["K-IFRS 1037 / IAS 37", "문단 14, 36, 45, 47, 60", "현재의무를 최선추정 현재가치로 인식하고 할인액 상각은 금융원가로 처리한다.", sources.ias37], ["K-IFRS 해석서 2101 / IFRIC 1", "문단 4–8", "기존 해체·복구충당부채 측정 변경의 자산·부채 조정을 다루는 공식 해석서다.", sources.ifric1]),
   },
   {
     id: 10,
@@ -147,7 +154,7 @@ export const questions = [
     correct: 1,
     answer: "경제적 유인으로 리스기간을 판단하고 고정료를 현재가치 측정",
     explanation: "연장선택권은 행사가 상당히 확실할 때 포함한다. 맞춤 인테리어와 이전비용은 경제적 유인이다. 매출연동 변동리스료는 지수·이율 연동이 아니므로 최초 부채에서 제외한다. 인테리어는 일반적으로 별도 유형자산이다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 18–21, 24, 26–27, 38(b); B37–B40", "리스기간, 사용권자산 원가, 리스료 현재가치, 지수·이율 외 변동리스료를 규정한다.", sources.ifrs16], ["K-IFRS 1016 / IAS 16", "문단 7, 16", "별도 인테리어가 유형자산 인식요건을 충족하면 별도 자산으로 회계처리한다.", sources.ias16], ["IFRS 해석위원회 안건결정", "2019.11 Lease Term and Useful Life of Leasehold Improvements", "리스개량의 경제적 효익과 포기 비용이 연장·종료 선택권 판단에서 경제적 불이익을 만드는지 검토한다.", sources.leaseTermDecision]),
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 18–21, 23–28, 32, 38(b); B37–B40", "리스기간과 최초 현재가치 측정, 지수·요율 외 변동리스료의 발생기 비용 처리를 규정한다.", sources.ifrs16], ["K-IFRS 1016 / IAS 16", "문단 16, 55–57", "별도 임차개량물은 유형자산 원가와 내용연수 원칙을 적용한다.", sources.ias16], ["IFRS 16 공식 적용사례", "Examples 13–14", "연장선택권의 경제적 유인과 리스기간 판단을 보여준다.", sources.ifrs16IE], ["IFRS 해석위원회 안건결정", "Lease Term and Useful Life of Leasehold Improvements (2019.11)", "리스개량물의 경제적 효익과 포기 비용을 선택권 판단에 반영한다.", sources.leaseTermDecision]),
   },
   {
     id: 11,
@@ -159,7 +166,7 @@ export const questions = [
     correct: 1,
     answer: "리스부채 재측정과 사용권자산 조정이 먼저",
     explanation: "리스기간 변경은 남은 지급의무 자체를 바꾸므로 감가상각기간만 줄일 수 없다. 수정 할인율로 리스부채를 재측정하고 사용권자산을 조정한 뒤 수정 잔여기간에 감가상각한다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 20–21, 39–43", "통제 가능한 유의적 사건이 선택권 판단을 바꾸면 리스기간을 재평가하고 수정 할인율로 부채를 재측정한다.", sources.ifrs16], ["IFRS 해석위원회 안건결정", "2019.11 Lease Term and Useful Life of Leasehold Improvements", "리스개량과 이전·포기 비용은 선택권 행사의 경제적 유인을 평가할 때 관련될 수 있다.", sources.leaseTermDecision]),
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 20–21, 39–41; B41", "임차인 통제 안의 중대한 사건이 선택권 판단을 바꾸면 리스기간을 재평가하고 수정 할인율로 부채를 재측정한다.", sources.ifrs16], ["IFRS 16 공식 적용사례", "Example 13", "연장선택권 판단에 영향을 주는 경제적 유인을 보여준다.", sources.ifrs16IE], ["IFRS 해석위원회 안건결정", "Lease Term and Useful Life of Leasehold Improvements (2019.11)", "리스개량과 이전·포기 비용이 선택권 판단에 관련될 수 있음을 설명한다.", sources.leaseTermDecision]),
   },
   {
     id: 12,
@@ -171,7 +178,7 @@ export const questions = [
     correct: 1,
     answer: "리스 범위 감소에 따른 일부 종료",
     explanation: "사용권 범위가 감소했으므로 반환 부분의 사용권자산과 리스부채 장부금액을 제거하고 차이를 손익으로 인식한다. 이후 남은 조건을 수정 할인율로 재측정한다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 45–46(a)", "리스 범위를 감소시키는 계약변경은 사용권자산 장부금액을 줄여 일부·전부 종료를 반영하고 손익을 인식한다.", sources.ifrs16]),
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 45, 46(a)", "리스 범위를 감소시키는 계약변경은 사용권자산 장부금액을 줄여 일부·전부 종료와 손익을 반영한다.", sources.ifrs16], ["IFRS 16 공식 적용사례", "Example 17", "리스 범위가 감소하는 계약변경의 비례 제거와 종료손익을 보여준다.", sources.ifrs16IE], ["IFRS Foundation 적용지원", "2017 Lease Modifications—Lessee webcast slides", "임차인 리스변경 회계의 공식 설명자료다.", sources.leaseModificationSlides]),
   },
   {
     id: 13,
@@ -182,8 +189,8 @@ export const questions = [
     options: ["일부 종료손익", "수정 할인율로 리스부채를 재측정하고 사용권자산 조정", "별도 리스", "재무제표 조정 없음"],
     correct: 1,
     answer: "범위 감소 없는 계약변경 재측정",
-    explanation: "사용권 일부가 소멸하지 않았으므로 일부 종료가 아니다. 변경된 대가를 수정 할인율로 재측정하고 차이는 사용권자산에 조정한다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 45, 46(b)", "별도 리스가 아니고 범위 감소도 아닌 계약변경은 수정 할인율로 부채를 재측정하고 사용권자산을 조정한다.", sources.ifrs16]),
+    explanation: "사용권 일부가 소멸하지 않았으므로 일부 종료가 아니다. 새 협상으로 원계약에 없던 대가 변경이 생겼다는 전제에서 수정 할인율로 재측정하고 차이는 사용권자산에 조정한다. 원래 계약의 조정조항 실행이면 리스변경이 아닐 수 있다.",
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 36(c), 38, 45, 46(b)", "범위 감소 없는 계약변경이면 수정 할인율로 재측정하지만 원계약 조정조항의 실행인지를 먼저 구분한다.", sources.ifrs16], ["IFRS 16 공식 적용사례", "Example 19", "리스 범위는 그대로이고 대가만 변경되는 사례를 보여준다.", sources.ifrs16IE]),
   },
   {
     id: 14,
@@ -195,7 +202,7 @@ export const questions = [
     correct: 1,
     answer: "별도 리스",
     explanation: "추가 사용권으로 범위가 증가하고 추가 대가가 개별가격에 상응하므로 기존 리스와 분리해 새로운 사용권자산과 리스부채를 인식한다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 44", "사용권 추가로 범위가 증가하고 대가가 개별가격에 상응하면 별도 리스로 회계처리한다.", sources.ifrs16]),
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 44(a)–(b)", "사용권 추가로 범위가 증가하고 대가가 개별가격에 상응하면 별도 리스로 회계처리한다.", sources.ifrs16], ["IFRS 16 공식 적용사례", "Example 15", "추가 공간 사용권과 독립가격 조건을 충족해 별도 리스로 처리하는 공식 사례다.", sources.ifrs16IE]),
   },
   {
     id: 15,
@@ -207,7 +214,7 @@ export const questions = [
     correct: 1,
     answer: "확률가중 기대신용손실 1.25억원",
     explanation: "확률가중 기대회수액은 3.75억원이고 손실은 1.25억원이다. 결산일에 이미 장기연체와 자금난이 있었다면 승인 전 회생신청은 기존 상태를 확인하는 수정후사건일 수 있어 추정치를 갱신한다.",
-    references: refs(["K-IFRS 1109 / IFRS 9", "문단 5.5.8, 5.5.15, 5.5.17", "매출채권의 전체기간 기대신용손실과 확률가중·합리적 전망을 반영한다.", sources.ifrs9], ["K-IFRS 1010 / IAS 10", "문단 8, 9(b)(i)", "보고기간 후 고객 파산은 대개 보고기간 말 신용손상을 확인해 손실충당금 조정을 요구한다.", sources.ias10]),
+    references: refs(["K-IFRS 1109 / IFRS 9", "문단 5.5.15, 5.5.17", "매출채권은 전체기간 기대신용손실을 적용하고 확률가중 결과·시간가치·합리적 전망을 반영한다.", sources.ifrs9], ["K-IFRS 1010 / IAS 10", "문단 3(a), 8, 9(b)(i)", "보고기간 후 고객 회생·파산은 대개 보고기간 말 신용손상을 확인하는 수정후사건이다.", sources.ias10]),
   },
   {
     id: 16,
@@ -219,7 +226,7 @@ export const questions = [
     correct: 1,
     answer: "비수정후사건",
     explanation: "화재는 결산일 현재 상태를 확인하는 사건이 아니라 결산일 후 새 상태를 만든다. 금액은 수정하지 않고 중요하면 성격과 추정 재무영향을 공시한다.",
-    references: refs(["K-IFRS 1010 / IAS 10", "문단 3, 21–22(b)", "보고기간 후 화재에 의한 주요 생산시설 파괴는 비수정후사건의 공식 예시다.", sources.ias10]),
+    references: refs(["K-IFRS 1010 / IAS 10", "문단 3(b), 10, 21, 22(d)", "보고기간 후 화재에 의한 주요 생산시설 파괴는 금액을 조정하지 않고 중요하면 공시하는 공식 예시다.", sources.ias10]),
   },
   {
     id: 17,
@@ -231,7 +238,7 @@ export const questions = [
     correct: 1,
     answer: "마감환율 재환산 후 당기손익",
     explanation: "외화 미지급금은 화폐성 부채이므로 결산일 마감환율로 재환산한다. 14억원 장부부채를 13.5억원에 결제하면 5천만원 이익이 발생한다.",
-    references: refs(["K-IFRS 1021 / IAS 21", "문단 21, 23(a), 28", "외화거래는 거래일 현물환율로 최초 인식하고 화폐성 항목은 마감환율로 환산하며 차이는 원칙적으로 손익이다.", sources.ias21]),
+    references: refs(["K-IFRS 1021 / IAS 21", "문단 21–23(a), 28", "외화거래는 거래일 현물환율로 최초 인식하고 화폐성 항목은 마감환율로 환산하며 차이는 원칙적으로 손익이다.", sources.ias21]),
   },
   {
     id: 18,
@@ -243,7 +250,7 @@ export const questions = [
     correct: 1,
     answer: "13억원 유지",
     explanation: "선급금은 외화를 돌려받을 권리가 아니라 서비스를 받을 비화폐성 권리다. 역사적 원가 비화폐성 항목은 거래일 환율을 유지하며, 해석서 2122는 선급대가 인식일을 거래일로 본다.",
-    references: refs(["K-IFRS 1021 / IAS 21", "문단 8, 16, 23(b)", "역사적 원가로 측정하는 외화 비화폐성 항목은 거래일 환율로 환산한다.", sources.ias21], ["K-IFRS 해석서 2122 / IFRIC 22", "문단 8–9", "선급·선수 대가와 관련된 비화폐성 자산·부채를 최초 인식한 날이 거래일이다.", sources.ifric22]),
+    references: refs(["K-IFRS 1021 / IAS 21", "문단 23(b)", "역사적 원가로 측정하는 외화 비화폐성 항목은 거래일 환율로 환산한다.", sources.ias21], ["K-IFRS 해석서 2122 / IFRIC 22", "문단 8; 복수 선지급은 9", "선급대가 관련 비화폐성 자산을 인식한 날을 거래일로 정한다.", sources.ifric22], ["IFRIC 22 공식 적용사례", "Example 1 (IE2–IE4)", "단일 외화 선지급에서 거래일 환율을 사용하는 공식 사례다.", sources.ifric22IE]),
   },
   {
     id: 19,
@@ -255,7 +262,7 @@ export const questions = [
     correct: 2,
     answer: "비화폐성 선급금은 유지, 화폐성 미지급금만 재환산",
     explanation: "결제 여부가 아니라 받을 권리·지급할 의무의 성격이 기준이다. 다만 서비스 제공 전이고 30만 달러 의무가 아직 무조건적이지 않다면 먼저 부채 인식 여부부터 검토한다.",
-    references: refs(["K-IFRS 1021 / IAS 21", "문단 8, 16, 23", "화폐성 항목은 확정·결정 가능한 화폐 단위를 수취·지급할 권리·의무이며 마감환율로 환산한다.", sources.ias21]),
+    references: refs(["K-IFRS 1021 / IAS 21", "문단 21–23, 28", "비화폐성 선급 부분은 선급일 환율로 고정하고 화폐성 미지급 부분은 마감환율로 재환산한다.", sources.ias21], ["K-IFRS 해석서 2122 / IFRIC 22", "문단 8–9", "복수의 선급·후불 대가에는 각각의 거래일을 식별한다.", sources.ifric22], ["IFRIC 22 공식 적용사례", "Example 3 (IE11–IE15)", "기간에 걸친 용역에 복수 지급이 있는 경우의 공식 사례다.", sources.ifric22IE]),
   },
   {
     id: 20,
@@ -267,7 +274,7 @@ export const questions = [
     correct: 1,
     answer: "기본 공정가치-당기손익 회계",
     explanation: "경제적 위험회피와 위험회피회계 적격성은 다르다. 공식 지정·문서화 등 요건이 없으면 파생상품 공정가치 변동은 당기손익이다. 서로 다른 상대방의 자산·부채는 상계요건을 충족하지 않으면 총액 표시한다.",
-    references: refs(["K-IFRS 1109 / IFRS 9", "문단 4.1.4, 4.2.1(a), 5.7.1, 6.4.1", "기본적으로 파생상품은 공정가치-당기손익이며 위험회피회계는 지정·문서화와 적격요건을 요구한다.", sources.ifrs9], ["K-IFRS 1032 / IAS 32", "문단 42", "법적으로 집행 가능한 상계권과 순액결제 의도가 모두 있어야 금융자산·부채를 상계한다.", sources.ias32]),
+    references: refs(["K-IFRS 1109 / IFRS 9", "문단 4.1.4 또는 4.2.1(a), 5.1.1, 5.7.1; 위험회피 지정은 6.4.1", "미지정 파생상품은 공정가치-당기손익으로 측정하며 위험회피회계에는 지정·문서화가 필요하다.", sources.ifrs9], ["K-IFRS 1032 / IAS 32", "문단 42–50; 특히 42(a)–(b)", "현재의 법적 상계권과 순액결제 또는 동시결제 의도가 모두 있어야 상계한다.", sources.ias32], ["IAS 32 공식 적용사례", "2024 Forward contract example", "선도계약의 금융자산·부채 표시를 보여주는 공식 예시다.", sources.ias32IE]),
   },
   {
     id: 21,
@@ -279,7 +286,7 @@ export const questions = [
     correct: 1,
     answer: "효과적 부분 OCI 후 비금융자산 원가 기초조정",
     explanation: "현금흐름위험회피의 효과적인 부분은 기타포괄손익에 누적한다. 예상 거래로 비금융자산이 생기면 누적액을 즉시 손익으로 재분류하지 않고 자산 최초 원가에 포함한다.",
-    references: refs(["K-IFRS 1109 / IFRS 9", "문단 6.5.11(c), 6.5.11(d)(i)", "효과적 부분은 현금흐름위험회피적립금에 누적하고 비금융자산·부채 인식 시 장부금액에 직접 포함한다.", sources.ifrs9]),
+    references: refs(["K-IFRS 1109 / IFRS 9", "문단 6.5.11(a)–(c), 6.5.11(d)(i)", "효과적 부분은 OCI 적립금에 누적하고 비금융자산·부채 인식 시 적립금에서 제거해 최초 원가에 직접 포함한다.", sources.ifrs9]),
   },
   {
     id: 22,
@@ -290,8 +297,8 @@ export const questions = [
     options: ["A·B 모두 즉시 손익", "A 유지, B 즉시 당기손익 재분류", "A 즉시 손익, B 영구 OCI", "A·B 모두 자산 원가"],
     correct: 1,
     answer: "A는 유지, B는 즉시 손익",
-    explanation: "거래가 여전히 발생할 것으로 예상되면 기존 누적액은 적립금에 남는다. 더 이상 발생하지 않을 것으로 예상되면 대응할 미래 거래가 없으므로 누적액을 즉시 손익으로 재분류한다.",
-    references: refs(["K-IFRS 1109 / IFRS 9", "문단 6.5.12", "예상 거래가 더 이상 발생할 것으로 예상되지 않으면 누적 현금흐름위험회피적립금을 즉시 손익으로 재분류한다.", sources.ifrs9]),
+    explanation: "거래가 단지 연기되어 여전히 발생할 것으로 예상되면 기존 누적액은 적립금에 남는다. 더 이상 발생하지 않을 것으로 예상되면 대응할 미래 거래가 없으므로 누적액을 즉시 손익으로 재분류한다. ‘더 이상 발생 가능성이 매우 높지 않음’과 ‘더 이상 예상되지 않음’은 같은 판단이 아니다.",
+    references: refs(["K-IFRS 1109 / IFRS 9", "문단 6.3.3, 6.5.6, 6.5.12(a)–(b)", "위험회피 중단 후에도 거래가 예상되면 적립금을 유지하지만 더 이상 예상되지 않으면 즉시 손익으로 재분류한다.", sources.ifrs9]),
   },
 ];
 
