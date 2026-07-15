@@ -53,7 +53,7 @@ function render() {
         <section class="score-card">
           <p class="eyebrow">CURRENT LEDGER</p>
           <div class="score-line"><strong>${score}</strong><span>/ ${answered || 0} 정답</span></div>
-          <div class="progress-track" aria-label="진행률 ${progress}%"><i style="width:${progress}%"></i></div>
+          <div class="progress-track" role="progressbar" aria-label="학습 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${progress}"><i style="width:${progress}%"></i></div>
           <p>${answered === 0 ? "첫 판단을 시작하세요." : `전체 ${active.length}문제 중 ${answered}문제 판정`}</p>
         </section>
 
@@ -155,7 +155,7 @@ function renderVerdict(question, result) {
             </li>
           `).join("")}
         </ol>
-        <p class="evidence-note">문단 번호는 K-IFRS와 대응 IFRS 기준서의 동일 번호를 병기했습니다. 링크는 공식 기관의 기준서·적용지원 페이지입니다.</p>
+        <p class="evidence-note">문단 번호는 K-IFRS와 대응 IFRS 기준서의 동일 번호를 병기했습니다. 링크는 공식 기관의 기준서·적용지원 페이지이며, 근거 확인일은 2026-07-15입니다.</p>
       </div>
     </section>
   `;

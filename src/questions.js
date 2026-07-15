@@ -13,6 +13,7 @@ const sources = {
   ifrs16: "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/",
   ifric1: "https://www.ifrs.org/issued-standards/list-of-standards/ifric-1-changes-in-existing-decommissioning-restoration-and-similar-liabilities/",
   ifric22: "https://www.ifrs.org/issued-standards/list-of-standards/ifric-22-foreign-currency-transactions-and-advance-consideration/",
+  leaseTermDecision: "https://www.ifrs.org/projects/completed-projects/2019/lease-term-and-useful-life-of-leasehold-improvements-ifrs-16-and-ias-16/",
 };
 
 function refs(...items) {
@@ -97,8 +98,8 @@ export const questions = [
     options: ["그렇다—일별 전표가 없으면 항상 기준 위반", "아니다—원칙은 진행도 인식이나 같은 보고기간 내 중요하지 않은 차이는 실무 단순화 가능", "출발일 총액 인식만 허용", "완료일 총액 인식만 허용"],
     correct: 1,
     answer: "원칙과 전표 빈도를 구분",
-    explanation: "수익은 진행도에 따라 인식하지만, 짧은 서비스가 같은 보고기간에 시작·종료되고 차이가 중요하지 않다면 일별 전표가 반드시 필요한 것은 아니다. 결산 경계를 넘거나 중요한 거래는 컷오프 조정한다.",
-    references: refs(["K-IFRS 1115 / IFRS 15", "문단 35(a), 39–40", "고객이 수행과 동시에 효익을 얻으면 기간에 걸쳐 수익을 인식하고 진행도를 측정한다.", sources.ifrs15], ["K-IFRS 1001 / IAS 1", "문단 7, 31", "중요하지 않은 정보에는 기준서의 특정 공시·표시 요구를 적용할 필요가 없으나, 중요성은 보고경계별로 판단한다.", sources.ias1]),
+    explanation: "수익은 진행도에 따라 인식하지만 K-IFRS는 전표 입력 빈도를 정하지 않는다. 짧은 서비스가 같은 보고기간에 시작·종료되고 차이가 중요하지 않다면 일별 전표 없이도 결산 재무제표가 원칙에 맞을 수 있다. 결산 경계를 넘거나 중요한 거래는 컷오프 조정한다.",
+    references: refs(["K-IFRS 1115 / IFRS 15", "문단 35(a), 39–40", "고객이 수행과 동시에 효익을 얻으면 기간에 걸쳐 수익을 인식하고 진행도를 측정한다.", sources.ifrs15], ["K-IFRS 1008 / IAS 8", "문단 8", "중요하지 않은 거래에 회계정책을 적용하지 않은 효과가 중요하지 않다면 기준서 위반으로 보지 않지만, 의도적 왜곡은 허용하지 않는다.", sources.ias8]),
   },
   {
     id: 7,
@@ -146,7 +147,7 @@ export const questions = [
     correct: 1,
     answer: "경제적 유인으로 리스기간을 판단하고 고정료를 현재가치 측정",
     explanation: "연장선택권은 행사가 상당히 확실할 때 포함한다. 맞춤 인테리어와 이전비용은 경제적 유인이다. 매출연동 변동리스료는 지수·이율 연동이 아니므로 최초 부채에서 제외한다. 인테리어는 일반적으로 별도 유형자산이다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 18–21, 24, 26–27, 38(b); B37–B40", "리스기간, 사용권자산 원가, 리스료 현재가치, 지수·이율 외 변동리스료를 규정한다.", sources.ifrs16], ["K-IFRS 1016 / IAS 16", "문단 7, 16", "별도 인테리어가 유형자산 인식요건을 충족하면 별도 자산으로 회계처리한다.", sources.ias16]),
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 18–21, 24, 26–27, 38(b); B37–B40", "리스기간, 사용권자산 원가, 리스료 현재가치, 지수·이율 외 변동리스료를 규정한다.", sources.ifrs16], ["K-IFRS 1016 / IAS 16", "문단 7, 16", "별도 인테리어가 유형자산 인식요건을 충족하면 별도 자산으로 회계처리한다.", sources.ias16], ["IFRS 해석위원회 안건결정", "2019.11 Lease Term and Useful Life of Leasehold Improvements", "리스개량의 경제적 효익과 포기 비용이 연장·종료 선택권 판단에서 경제적 불이익을 만드는지 검토한다.", sources.leaseTermDecision]),
   },
   {
     id: 11,
@@ -158,7 +159,7 @@ export const questions = [
     correct: 1,
     answer: "리스부채 재측정과 사용권자산 조정이 먼저",
     explanation: "리스기간 변경은 남은 지급의무 자체를 바꾸므로 감가상각기간만 줄일 수 없다. 수정 할인율로 리스부채를 재측정하고 사용권자산을 조정한 뒤 수정 잔여기간에 감가상각한다.",
-    references: refs(["K-IFRS 1116 / IFRS 16", "문단 20–21, 39–43", "통제 가능한 유의적 사건이 선택권 판단을 바꾸면 리스기간을 재평가하고 수정 할인율로 부채를 재측정한다.", sources.ifrs16]),
+    references: refs(["K-IFRS 1116 / IFRS 16", "문단 20–21, 39–43", "통제 가능한 유의적 사건이 선택권 판단을 바꾸면 리스기간을 재평가하고 수정 할인율로 부채를 재측정한다.", sources.ifrs16], ["IFRS 해석위원회 안건결정", "2019.11 Lease Term and Useful Life of Leasehold Improvements", "리스개량과 이전·포기 비용은 선택권 행사의 경제적 유인을 평가할 때 관련될 수 있다.", sources.leaseTermDecision]),
   },
   {
     id: 12,
@@ -266,7 +267,7 @@ export const questions = [
     correct: 1,
     answer: "기본 공정가치-당기손익 회계",
     explanation: "경제적 위험회피와 위험회피회계 적격성은 다르다. 공식 지정·문서화 등 요건이 없으면 파생상품 공정가치 변동은 당기손익이다. 서로 다른 상대방의 자산·부채는 상계요건을 충족하지 않으면 총액 표시한다.",
-    references: refs(["K-IFRS 1109 / IFRS 9", "문단 4.1.4, 5.7.1, 6.4.1", "기본적으로 파생상품은 공정가치-당기손익이며 위험회피회계는 지정·문서화와 적격요건을 요구한다.", sources.ifrs9], ["K-IFRS 1032 / IAS 32", "문단 42", "법적으로 집행 가능한 상계권과 순액결제 의도가 모두 있어야 금융자산·부채를 상계한다.", sources.ias32]),
+    references: refs(["K-IFRS 1109 / IFRS 9", "문단 4.1.4, 4.2.1(a), 5.7.1, 6.4.1", "기본적으로 파생상품은 공정가치-당기손익이며 위험회피회계는 지정·문서화와 적격요건을 요구한다.", sources.ifrs9], ["K-IFRS 1032 / IAS 32", "문단 42", "법적으로 집행 가능한 상계권과 순액결제 의도가 모두 있어야 금융자산·부채를 상계한다.", sources.ias32]),
   },
   {
     id: 21,
